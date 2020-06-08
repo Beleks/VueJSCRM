@@ -10,6 +10,22 @@ Vue.use(VueRouter)
     name: 'Home',
     component: Home
   },
+  {
+    path: '/login',
+    name: 'login',
+    meta: {
+      layout: 'empty'
+    },
+    component: () => import('./views/Login.vue') // Путь ??? 
+  },
+  {
+    path: '/categories',
+    name: 'categories',
+    meta: {
+      layout: 'main'
+    },
+    component: () => import('./views/Categories.vue')
+  }
 ]
 
 const router = new VueRouter({
